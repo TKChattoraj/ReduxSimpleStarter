@@ -16,7 +16,7 @@ class App extends Component {
     this.state = { videos: [] }
 
     // 'videos' is what is returned object from the YTSearch--we can call it anything we want
-    YTSearch({key: API_KEY, term: 'chattoraj'}, (videos) => {
+    YTSearch({key: API_KEY, term: '1975 Cincinnati Reds'}, (videos) => {
       this.setState( {videos});
       // the above is the same as:
       // this.setState ({ videos: videos})
