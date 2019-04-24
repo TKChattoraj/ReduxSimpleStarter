@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VideoListItem = ({video}) => {
+const VideoListItem = ({video, listItemVideoSelect}) => {
   // '{video}' in the above line is the same as
   // 'const video = props.video;' if within
   // the VideoListItem components
@@ -9,12 +9,13 @@ const VideoListItem = ({video}) => {
   //  being passed to the component.
 
   // return <li>Video</li>
+
   const imageUrl = video.snippet.thumbnails.default.url;
   const title = video.snippet.title;
   console.log(video);
 
   return (
-    <li  className="list-group-item">
+    <li  onClick={() => listItemVideoSelect(video)} className="list-group-item">
       <div className="video-list media">
         <div className ="media-left">
           <img className="media-object" src={imageUrl}/>
